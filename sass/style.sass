@@ -6,7 +6,6 @@ body
     font-style: normal
     font-weight: 400
     margin: 0
-    padding: 0
 
 *
     box-sizing: border-box
@@ -16,9 +15,11 @@ body
     margin: 0 auto
 
 .header
+    margin: 0
+    padding: 0
     min-height: 134px
     background: #EDF2EC
-    // width: 100%
+    width: 100%
     &__wrapper
         height: 134px
         display: flex
@@ -257,10 +258,13 @@ body
                 color: #717171
 
 .prices
+    margin: 0
     padding: 38px 109px 115px
     background: #FFFFFF
     min-height: 560px
-    display: flex
+    &__generalwrap
+        display: flex
+        align-items: space-between
     &__title
         font-family: 'Inter'
         font-style: normal
@@ -357,7 +361,7 @@ body
                 margin: 0 auto
             li
                 list-style: none
-                d   isplay: inline-block
+                display: inline-block
     &__social
         &__item
             margin-right: 30px
