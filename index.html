@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
-    
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -18,23 +18,23 @@
     <meta name="msapplication-TileColor" content="#b91d47">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body class="body">
     <header class="header">
         <div class="container">
-                <div class="header__wrapper">
+            <div class="header__wrapper">
                 <div class="header__logo">
                 Plants
                 </div> 
-                <nav class="header__nav">
-                    <ul class="navigation">
-                        <li class="navigation__link"><a href="#home" class="nav-link">Home</a></li>
-                        <li class="navigation__link"><a href="#about" class="nav-link">About us</a></li>
-                        <li class="navigation__link"><a href="#service" class="nav-link">Service</a></li>
-                        <li class="navigation__link"><a href="#price" class="nav-link">Price</a></li>
-                        <li class="navigation__link"><a href="#contacts" class="nav-link">Contacts</a></li>
-                    </ul>
-                </nav>
-                </div>
+                    <nav class="header__nav">
+                        <ul class="navigation">
+                            <li class="navigation__link"><a href="#home" class="nav-link">Home</a></li>
+                            <li class="navigation__link"><a href="#about" class="nav-link">About us</a></li>
+                            <li class="navigation__link"><a href="#service" class="nav-link">Service</a></li>
+                            <li class="navigation__link"><a href="#price" class="nav-link">Price</a></li>
+                            <li class="navigation__link"><a href="#contacts" class="nav-link">Contacts</a></li>
+                        </ul>
+                    </nav>
+            </div>
         </div>
     </header>
     <main>
@@ -79,7 +79,7 @@
                 <div class="service__wrap2">
                    <div class="service__wrap2__item">
                         <figure>
-                        <img src="img/service-1.jfif" alt="Picture 1" class="service__wrap2">
+                        <img src="img/service-1.jfif" alt="Picture 1" class="service__wrap2" width="329" height="350">
                             <figcaption>
                             <p class="service__wrap2__item__header">Garden care</p>
                             <p class="service__wrap2__item__subheader">Lorem Ipsum has been the industry</p>
@@ -88,7 +88,7 @@
                    </div>
                    <div class="service__wrap2__item">
                         <figure>
-                        <img src="img/service-2.jfif" alt="Picture 2" class="service__wrap2">
+                        <img src="img/service-2.jfif" alt="Picture 2" class="service__wrap2" width="329" height="350">
                             <figcaption>
                             <p class="service__wrap2__item__header">Planting</p>
                             <p class="service__wrap2__item__subheader">Lorem Ipsum has been the industry</p>
@@ -97,7 +97,7 @@
                    </div>
                    <div class="service__wrap2__item">
                         <figure>
-                        <img src="img/service-3.jfif" alt="Picture 3" class="service__wrap2">
+                        <img src="img/service-3.jfif" alt="Picture 3" class="service__wrap2" width="329" height="350">
                             <figcaption>
                             <p class="service__wrap2__item__header">Garden care</p>
                             <p class="service__wrap2__item__subheader">Lorem Ipsum has been the industry</p>
@@ -106,7 +106,7 @@
                    </div>
                    <div class="service__wrap2__item">
                         <figure>
-                        <img src="img/service-4.jfif" alt="Picture 4" class="service__wrap2">
+                        <img src="img/service-4.jfif" alt="Picture 4" class="service__wrap2" width="329" height="350">
                             <figcaption>
                             <p class="service__wrap2__item__header">Planting</p>
                             <p class="service__wrap2__item__subheader">Lorem Ipsum has been the industry</p>
@@ -115,7 +115,7 @@
                    </div>
                    <div class="service__wrap2__item">
                         <figure>
-                        <img src="img/service-5.jfif" alt="Picture 5" class="service__wrap2">
+                        <img src="img/service-5.jfif" alt="Picture 5" class="service__wrap2" width="329" height="350">
                             <figcaption>
                             <p class="service__wrap2__item__header">Garden care</p>
                             <p class="service__wrap2__item__subheader">Lorem Ipsum has been the industry</p>
@@ -124,21 +124,19 @@
                    </div>
                    <div class="service__wrap2__item">
                         <figure>
-                        <img src="img/service-6.jfif" alt="Picture 6" class="service__wrap2">
+                        <img src="img/service-6.jfif" alt="Picture 6" class="service__wrap2" width="329" height="350">
                             <figcaption>
                             <p class="service__wrap2__item__header">Planting</p>
                             <p class="service__wrap2__item__subheader">Lorem Ipsum has been the industry</p>
                             </figcaption> 
                         </figure> 
                    </div>
-
-
                 </div>
             </div>
         </section>
 
         <section class="prices" id="prices">
-            <div class="container">
+            <div class="container__prices">
                 <div class="prices__generalwrap">
                     <div class="prices__wrap1">
                         <h2 class="prices__title">Prices</h2>
@@ -149,7 +147,7 @@
                         </div>
                     </div>
                     <form class="prices__wrap2">
-                        <h2 class="prices__title">Our best <span>gardeners</span> are <br> ready to help you</h2>
+                        <h2 class="prices__title__2">Our best <span>gardeners</span> are <br> ready to help you</h2>
                         <form action="#" method="get"> <button class="prices__wrap2__button">Contact us</button> 
                         <img src="img/leafs-2.png" alt="Leafs" class="prices__wrap2__image">
                 </div>

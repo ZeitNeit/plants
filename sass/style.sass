@@ -1,36 +1,43 @@
 html
     scroll-behavior: smooth
 
-body
+.body
+    min-height: 100vh
+    display: flex
+    flex-direction: column
     font-family: "Inter", sans-serif
     font-style: normal
     font-weight: 400
-    margin: 0
 
 *
     box-sizing: border-box
 
-.container 
+.container
     max-width: 1440px
     margin: 0 auto
+    padding: 0
+    // &__prices
+    //     max-width: 1440px
+    //     margin: 0 auto
+
+.main
+    flex: 1 1 auto
 
 .header
-    margin: 0
-    padding: 0
-    min-height: 134px
     background: #EDF2EC
-    width: 100%
     &__wrapper
-        height: 134px
+        // height: 134px
+        padding: 42px 109px
         display: flex
         justify-content: space-around
         align-items: center
-        margin: 0 110px
+        // margin: 0 110px
     &__logo
         position: relative
         display: flex
         justify-content: flex-start
         flex: 1
+        margin-left: 25px
         font-family: 'Inika'
         font-style: normal
         font-weight: 400
@@ -48,6 +55,8 @@ body
     &__nav
         display: flex
         justify-content: space-between
+        ul
+            margin: 0
 
 
 .navigation 
@@ -68,24 +77,29 @@ body
             &:hover
                 color: #E06733
                 font-weight: 700
+    ul
+        &.navigation
+            margin: 0px
 
 .welcome
-    padding: 62px 109px
+    // padding: 62px 109px
     background: #EDF2EC
-    min-height: 532px
+    // min-height: 532px
     &__wrapper
         display: flex
-        flex-wrap: nowrap
+        // flex-wrap: nowrap
+        // align-items: center
         justify-content: space-between
-        align-items: center
+        padding: 62px 109px 55px 109px
+        max-height: 532px
     &__image
         max-width: 100%
     &__leaf
         display: block
         width: 50%
     &__content
-        display: block
-        width: 50%
+        // display: block
+        max-width: 549px
     &__title
         font-family: 'Inter'
         font-style: normal
@@ -93,8 +107,7 @@ body
         font-size: 45px
         line-height: 50px
         color: #717171
-        margin-top: 32px
-        // width: 550px
+        margin-top: 38px
         span
             color: #499A18
     &__text
@@ -117,7 +130,8 @@ body
         font-size: 16px
         line-height: 20px
         background: #EDF2EC
-        margin-top: 42px
+        margin-top: 28px
+        transition: 0.4s ease
         &:hover
             background-color:#E06733
             cursor: pointer
@@ -134,18 +148,20 @@ body
     &__wrapper
         display: flex
         flex-wrap: nowrap
-        justify-content: space-between normal
+        justify-content: space-between
         align-items: center
     &__plant
         display: block
         width: 50%
     &__content
         display: block
-        width: 50%
+        max-width: 605px
     &__image
         max-width: 100%
         margin-left: 153px
     &__title
+        margin-block-start: 0
+        margin-block-end: 0
         font-family: 'Inika'
         font-style: normal
         font-weight: 400
@@ -153,7 +169,7 @@ body
         line-height: 52px
         color: #499A18
         width: 463px
-        height: 102px
+        
         span
             color: #E06733
     &__text
@@ -164,24 +180,26 @@ body
         line-height: 30px
         color: #636060
         width: 605px
-        height: 208px
+        margin-block-start: 0
+        margin-block-end: 0
+        margin-top: 39px
+
 
 .service
-    padding: 40px 109px 119px
+    padding: 40px 66px 119px
     background: #EDF2EC
-    min-height: 1300px
+    // min-height: 1300px
     &__wrap1
-        min-height: 94px
+        padding-left: 43px
+        max-width: 1007px
         display: flex
         flex-wrap: nowrap
         justify-content: space-between
         align-items: center
         &__title
-            width: 33%
-            height: 94px
-            margin-left: 33px
-            // left: 109px
-            // top: 40px
+            max-width: 306px
+            margin-block-start: 0
+            margin-block-end: 0
             font-family: 'Inika'
             font-style: normal
             font-weight: 400
@@ -189,8 +207,7 @@ body
             line-height: 52px
             color: #499A18
         &__buttons
-            margin-left: 30px
-            width: 66%
+            // margin-left: 30px
             display: flex
             flex: flex-start
             button
@@ -207,7 +224,7 @@ body
                 line-height: 26px
                 color: #E06733
                 background: none
-                margin-right: 38px
+                margin-left: 38px
                 form
                     text-decoration: none
                     width: 161px
@@ -218,20 +235,21 @@ body
                     font-weight: 700
     &__wrap2
         display: flex
-        justify-content: space-between
-        align-items: center
         flex-wrap: wrap
         &__item
-            width: 33.33%
+            padding: 0 58.5px
             margin-top: 55px
-            // margin: 0 auto
+            margin-right: -30px
             img
                 width: 330px
-                min-height: 500px
+                height: 450px
                 border-radius: 20px
-                margin: 0
             figure
-                height: 500px
+                max-height: 450px
+                margin-block-start: 0
+                margin-block-end: 0
+                margin-inline-start: 0
+                margin-inline-end: 0
             figcaption
                 position: relative
                 top: -100px
@@ -258,13 +276,11 @@ body
                 color: #717171
 
 .prices
-    margin: 0
-    padding: 38px 109px 115px
+    padding: 32px 109px 115px
     background: #FFFFFF
-    min-height: 560px
     &__generalwrap
         display: flex
-        align-items: space-between
+        justify-content: space-between
     &__title
         font-family: 'Inter'
         font-style: normal
@@ -274,27 +290,30 @@ body
         color: #000000
         span
             color: #499A18
+        &__2
+            text-align: right
+            font-family: 'Inter'
+            font-style: normal
+            font-weight: 700
+            font-size: 40px
+            line-height: 48px
+            color: #000000
     &__wrap1
-        width: 50%
-        display: flex
-        flex-direction: column
-        align-items: flex-start
         &__item
-            margin-top: 12px
+            margin-top: 80px
             width: 332px
             height: 282px
             border: 1px solid #E3E1D5
             border-radius: 20px
-            padding: 32px 41px 0px 41px
+            padding: 10px 41px 0px 41px
             img
-                margin-bottom: 30px
+                margin-bottom: 28px
     &__wrap2
-        width: 50%
         display: flex
         flex-direction: column
-        align-items: flex-end
-        justify-content: start
+        align-items: end
         &__button
+            margin-top: 9px
             width: 161px
             height: 50px
             border: 1px solid #E06733
