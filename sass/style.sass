@@ -9,16 +9,17 @@ html
     font-style: normal
     font-weight: 400
 
+@import "mixins"
+
 *
     box-sizing: border-box
 
 .container
-    max-width: 1440px
+    max-width: 1242px
     margin: 0 auto
-    padding: 0
-    // &__prices
-    //     max-width: 1440px
-    //     margin: 0 auto
+    padding: 0 10px
+    @media (max-width: 768px)
+        padding: 0 50px
 
 .main
     flex: 1 1 auto
@@ -26,18 +27,19 @@ html
 .header
     background: #EDF2EC
     &__wrapper
-        // height: 134px
-        padding: 42px 109px
+        padding: 52px 0 42px
         display: flex
         justify-content: space-around
-        align-items: center
-        // margin: 0 110px
+        +media-tablet
+            padding: 30px 0
     &__logo
         position: relative
-        display: flex
-        justify-content: flex-start
+        padding-left: 29px
+        padding-top: 10px
+        // display: flex
+        // justify-content: flex-start
         flex: 1
-        margin-left: 25px
+        margin-left: 0px
         font-family: 'Inika'
         font-style: normal
         font-weight: 400
@@ -46,31 +48,28 @@ html
         &:before
             content: ""
             position: absolute
-            top: -3px
-            left: -20px
+            top: 7px
+            left: 7px
             width: 20px
             height: 20px
             background-size: 20px 20px
             background-image: url(../icons/logo_vector.svg)
-    &__nav
-        display: flex
-        justify-content: space-between
-        ul
-            margin: 0
-
 
 .navigation 
     display: flex
     &__link 
         align-items: center
         list-style: none
-        margin-left: 46px
+        margin-top: -4px
+        margin-left: 47px
         cursor: pointer
         font-family: 'Inika'
         font-style: normal
         font-weight: 400
         font-size: 16px
         line-height: 50px
+        // &:first-child
+        //     margin-left: 0px
         a
             text-decoration: none
             color: #010201
@@ -79,27 +78,30 @@ html
                 font-weight: 700
     ul
         &.navigation
-            margin: 0px
+            // margin: 0px
+
 
 .welcome
-    // padding: 62px 109px
     background: #EDF2EC
-    // min-height: 532px
     &__wrapper
         display: flex
-        // flex-wrap: nowrap
-        // align-items: center
+        flex-direction: row-reverse
         justify-content: space-between
-        padding: 62px 109px 55px 109px
-        max-height: 532px
+        padding: 62px 0 55px 0
+        @media (max-width: 768px)
+            padding: 40px 0 70px 0
     &__image
-        max-width: 100%
-    &__leaf
-        display: block
-        width: 50%
-    &__content
+        // max-width: 100%
+    &__leafs
         // display: block
+        img
+            max-width: 100%
+            max-height: 100%
+    &__content
         max-width: 549px
+
+        @media (max-width: 768px)
+            max-width: 341px           
     &__title
         font-family: 'Inter'
         font-style: normal
@@ -110,6 +112,9 @@ html
         margin-top: 38px
         span
             color: #499A18
+        @media (max-width: 768px)
+            font-size: 35px
+            margin-top: 0
     &__text
         font-family: 'Inter'
         font-style: normal
@@ -118,7 +123,10 @@ html
         line-height: 35px
         color: #636060
         margin-top: 42px
-        // width: 550px
+        @media (max-width: 768px)
+            font-size: 16px
+            margin-top: 30px
+            line-height: 25px
     &__button
         width: 158px
         height: 44px
@@ -130,11 +138,14 @@ html
         font-size: 16px
         line-height: 20px
         background: #EDF2EC
-        margin-top: 28px
+        margin-top: 48px
         transition: 0.4s ease
         &:hover
             background-color:#E06733
             cursor: pointer
+        @media (max-width: 768px)
+            margin-top: 30px
+
     form
         width: 158px
         height: 44px
@@ -142,23 +153,31 @@ html
         transition: color 0.5s
 
 .about
-    padding: 93px 109px
     background: #FFFFFF
-    min-height: 666px
     &__wrapper
         display: flex
-        flex-wrap: nowrap
         justify-content: space-between
         align-items: center
+        padding: 96px 0px 88px
+        +media-tablet
+            padding: 40px 0px 95px
+            flex-wrap: wrap
+            justify-content: center
     &__plant
-        display: block
-        width: 50%
+        +media-tablet
+            width: 250px
+            height: 258px
+            margin-top: 40px
     &__content
-        display: block
-        max-width: 605px
+        padding-left: 7px
+        +media-tablet
+            padding-left: 0px
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
     &__image
         max-width: 100%
-        margin-left: 153px
+        max-height: 100%    
     &__title
         margin-block-start: 0
         margin-block-end: 0
@@ -169,9 +188,13 @@ html
         line-height: 52px
         color: #499A18
         width: 463px
-        
         span
             color: #E06733
+        +media-tablet
+           font-size: 35px 
+           line-height: 45px
+           text-align: center
+           margin-right: 0px
     &__text
         font-family: 'Inter'
         font-style: normal
@@ -186,30 +209,32 @@ html
 
 
 .service
-    padding: 40px 66px 119px
+    padding: 40px 0 66px 0
     background: #EDF2EC
-    // min-height: 1300px
+    +media-tablet
+        padding: 60px 0 70px 0
     &__wrap1
-        padding-left: 43px
         max-width: 1007px
         display: flex
-        flex-wrap: nowrap
-        justify-content: space-between
+        // justify-content: space-between
         align-items: center
+        flex-wrap: wrap
+        margin-bottom: 27px
         &__title
+            margin: 0
+            margin-right: 114px
             max-width: 306px
-            margin-block-start: 0
-            margin-block-end: 0
             font-family: 'Inika'
             font-style: normal
             font-weight: 400
             font-size: 40px
             line-height: 52px
             color: #499A18
+            +media-tablet
+                font-size: 35px
+                line-height: 45px 
         &__buttons
-            // margin-left: 30px
             display: flex
-            flex: flex-start
             button
                 width: 161px
                 height: 50px
@@ -230,36 +255,29 @@ html
                     width: 161px
                     height: 50px
                     transition: color 0.5s
+                +media-tablet
+                    margin: 40px 38px 0 0
                 &:hover
                     color: #E06733
                     font-weight: 700
     &__wrap2
+        padding-top: 53px
         display: flex
         flex-wrap: wrap
+        margin: 0 -59px
         &__item
-            padding: 0 58.5px
-            margin-top: 55px
-            margin-right: -30px
+            padding: 0 58px
+            margin-bottom: 55px
+            +media-tablet
+                padding: 0 25px
             img
-                width: 330px
-                height: 450px
-                border-radius: 20px
-            figure
-                max-height: 450px
-                margin-block-start: 0
-                margin-block-end: 0
-                margin-inline-start: 0
-                margin-inline-end: 0
-            figcaption
-                position: relative
-                top: -100px
-                width: 330px
-                height: 100px
-                border: 1px solid #E3E1D5
-                border-radius: 0px 0px 20px 20px
-                background: #EDF2EC
+                // width: 100%
+                border-radius: 20px 20px 0px 0px
+                object-fit: cover
+                max-width: 100%
             &__header
-                text-align: center
+                // text-align: center
+                margin-top: 10px
                 font-family: 'Inter'
                 font-style: normal
                 font-weight: 700
@@ -267,16 +285,22 @@ html
                 line-height: 20px
                 color: #E06733
             &__subheader
-                text-align: center
+                // text-align: center
+                margin-top: 12px
                 font-family: 'Inter'
                 font-style: normal
                 font-weight: 400
                 font-size: 16px
                 line-height: 20px
                 color: #717171
+.item-info
+  text-align: center
+  padding-bottom: 36px
+  border: 1px solid #E3E1D5
+  border-radius: 0px 0px 20px 20px
 
 .prices
-    padding: 32px 109px 115px
+    padding: 38px 0 110px 0
     background: #FFFFFF
     &__generalwrap
         display: flex
@@ -288,8 +312,6 @@ html
         font-size: 40px
         line-height: 48px
         color: #000000
-        span
-            color: #499A18
         &__2
             text-align: right
             font-family: 'Inter'
@@ -298,6 +320,8 @@ html
             font-size: 40px
             line-height: 48px
             color: #000000
+            span
+                color: #499A18
     &__wrap1
         &__item
             margin-top: 80px
@@ -313,7 +337,7 @@ html
         flex-direction: column
         align-items: end
         &__button
-            margin-top: 9px
+            margin-top: 40px
             width: 161px
             height: 50px
             border: 1px solid #E06733
@@ -339,7 +363,7 @@ html
             margin-top: 39px
 
 .contacts
-    padding: 53px 109px 0px
+    padding-top: 53px
     background: #FFFFFF
     min-height: 550px
     background: #EDF2EC
@@ -354,10 +378,26 @@ html
             line-height: 52px
             color: #499A18
             margin: 0
-        &__item-3
-            margin-top: 95px
+        // &__item-3
+        //     margin-top: 95px
 
-    
+.contacts-list
+    margin-top: 95px
+    appearance: none
+    padding-left: 20px
+    font-weight: 400
+    font-size: 20px
+    line-height: 40px
+    letter-spacing: 0.1em
+    color: var(--grey-light)
+    width: 450px
+    height: 50px
+    background: #D6E7D2
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    background-image: url(../icons/accordion_btn.svg)
+    background-repeat: no-repeat
+    background-position: 399px 17px
+
 .footer
     min-height: 130px
     &__wrap1
